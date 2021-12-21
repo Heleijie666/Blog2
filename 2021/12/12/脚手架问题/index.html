@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Vue笔记, 楚门症患者">
-    <meta name="description" content="Vue笔记1.在标签里使用mustache语法时，computed计算属性的函数可以不加（），但是如果是函数则必须加（），所以在某种程度上说，computed就是将函数转化成变量。
-2.let关键字声明变量的时候：
-let sum=0,i=">
+    <meta name="keywords" content="楚门症患者">
+    <meta name="description" content="
+titie:脚手架问题1. vue init webpack(vue-cli2.0安装脚手架命令)在选择Vue build时如果选择的是runtime-only(只用运行环境)，则在src里面的main.js是如下这样的：
+![runti">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@ let sum=0,i=">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Vue笔记 | 楚门症患者</title>
+    <title>楚门症患者</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +311,12 @@ let sum=0,i=">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Vue笔记</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -444,7 +444,7 @@ let sum=0,i=">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-27
+                    2021-12-12
                 </div>
                 
 
@@ -465,48 +465,14 @@ let sum=0,i=">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Vue笔记"><a href="#Vue笔记" class="headerlink" title="Vue笔记"></a>Vue笔记</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>在标签里使用mustache语法时，computed计算属性的函数可以不加（），但是如果是函数则必须加（），所以在某种程度上说，computed就是将函数转化成变量。</p>
-<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p>let关键字声明变量的时候：</p>
-<p>let sum=0,i=0;</p>
-<p>let i,sum=0;</p>
-<p>第一种i和sum都会定义且初始值为0，第二种方法则是i和sum都定义了，但是i没有初始值。</p>
-<h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><p>用来比较或者判断两者是否相等，比较时可以自动转换数据类型。</p>
-<p>　　=== 用来较为严格的比较，除判断数据是否相等 ，还会判断两者数据类型是否相同，如不相同也不会转换数据类型，返回（false）。</p>
-<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><script src="vue.js"></script>
-<script src="main.js"></script>
-
-<p>这两句话最好放到代码的后面，否则就可能出现你界面做出来了，vue的数据没有渲染进去。</p>
-<p>比如表格出来了，当里面的数据只显示一个</p>
-<h3 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h3><p>splice（参数1，参数2，参数3）函数可以用来插入也可以用来删除</p>
-<p>参数1：开始操作的位置</p>
-<p>参数2：删除的个数，0则为不删除也就是添加。</p>
-<p>参数3：只有在参数2 为0的时候使用，一般是数组[a,b,c]，意思就在参数1 的位置后面添加a，b，c三个元素。</p>
-<h3 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h3><p>v-bind语法糖就是冒号，   v-bind几乎可以绑定任何属性，甚至可以绑定class属性，同理也可以绑定id属性，用法都是一样的，都是直接在style标签里面.class{},#id{}然后书写样式，只是多了个绑定vue数据的步骤罢了。那么为什么要用v-bind呢<br>    主要是要跟vue里面容器的数据互动，可以把v-bind是一根通进vue容器的绳子，这个绳子将html里的属性和<br>    vue容器的里面的数据绑定起来。<br>    我们都知道，a标签有个href属性，主要是保存链接，当我们点击a标签开始生效，那么当我们在vue里面定义了<br>    一个url:’<a target="_blank" rel="noopener" href="http://www.baidu.com&/#39;%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%86%99%E5%9C%A8herf%E5%90%8E%E9%9D%A2%EF%BC%88">www.baidu.com&#39;的时候，我们不能直接写在herf后面（</a>&lt;a href:”url”&gt;），因为vue容器<br>    是封锁的，不能直接去拿数据，这时候就要用到v-bind。</p>
-<h3 id="7"><a href="#7" class="headerlink" title="7."></a>7.</h3><p>v-for一定要与v-bind:key=”id”连用</p>
-<h3 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h3><p>【面试】父子组件通信的方式有哪几种？</p>
-<p>1 props   $mit<br>2 回调函数(callback)<br>3 parent + $children<br>4 provide + inject<br>5 $attrs + $ilsteners<br>6  ref  refs</p>
-<p>props用于父传子，props写在子组件注册（Vue.component）里面，跟methods：，data：一样的位置</p>
-<p>1、父组件可以使用 props 把数据传给子组件。<br>2、子组件可以使用 $emit 触发父组件的自定义事件。<a target="_blank" rel="noopener" href="https://c.runoob.com/codedemo/5353/">https://c.runoob.com/codedemo/5353/</a></p>
-<h3 id="9"><a href="#9" class="headerlink" title="9"></a>9</h3><p>ES6简写</p>
-<p>const{XXX}=this.XXX</p>
-<p>const{XXX}=this.props相当于const XXX = this.props.XXX</p>
-<h3 id="10"><a href="#10" class="headerlink" title="10"></a>10</h3><p>【报错】Maximum call stack size exceeded</p>
-<p>解决：</p>
-<p>items.splice(index ,1 ,items)-&gt;items.splice(index ,1 ,item)</p>
-<p>错误代码:</p>
-<p>methods:{<br>  handleChange({index,value}){<br>    const{items} = this<br>    const  item = items[index]<br>    item.qty = value<br>    items.splice(index ,1 ,items)</p>
-<p>  }</p>
-<h3 id="11"><a href="#11" class="headerlink" title="11"></a>11</h3><p>箭头函数：</p>
-<p><strong>其中脚手架vue build若选择的是runtime-only，那生成脚手架之后的src里的mian.js就有一个render：h =&gt; h(App)箭头函数</strong></p>
-<p>const materials = [<br>  ‘Hydrogen’,<br>  ‘Helium’,<br>  ‘Lithium’,<br>  ‘Beryllium’<br>];</p>
-<p>console.log(materials.map(material =&gt; material.length));<br>// expected output: Array [8, 6, 7, 9]</p>
-<p>//map()方法定义在JavaScript的Array中，它返回一个新的数组，数组中的元素为原始数组调用函数处理后的值。</p>
-<p>栗有：</p>
-<p>1 var arr = [“wei”,”ze”,”yang”];<br>2 arr.map(item=&gt;”Mr.”+item);   // [“Mr.wei”, “Mr.ze”, “Mr.yang”]<br>实则</p>
-<p>1 var arr = [“wei”,”ze”,”yang”];<br>2 arr.map(function(item){<br>3     return “Mr.”+item;<br>4 });</p>
-<h3 id="12"><a href="#12" class="headerlink" title="12"></a>12</h3><p>【报错】出现这种网址栏url重复了几个home的情况</p>
-<p>![重复][1.png]</p>
-<p>【解决】router-link标签里面的 to=”home/news”,home前面加/号</p>
+                <hr>
+<h2 id="titie-脚手架问题"><a href="#titie-脚手架问题" class="headerlink" title="titie:脚手架问题"></a>titie:脚手架问题</h2><h3 id="1-vue-init-webpack-vue-cli2-0安装脚手架命令"><a href="#1-vue-init-webpack-vue-cli2-0安装脚手架命令" class="headerlink" title="1. vue init webpack(vue-cli2.0安装脚手架命令)"></a>1. vue init webpack(vue-cli2.0安装脚手架命令)</h3><p>在选择Vue build时如果选择的是runtime-only(只用运行环境)，则在src里面的main.js是如下这样的：</p>
+<p>![runtime-only/standalone的main.js][1.png]</p>
+<p>而如果选择的是runtime(运行环境)+compiler(编译程序)，则src下的main.js是这样的</p>
+<p>![runtime+compiler/runtime的main.js][2.png]</p>
+<p>对比之下不难发现，一个new Vue里面el下面的是render，一个是template和components,然后再让我们看看vue-cli（脚手架）3的main.js界面，值得注意的是，脚手架3安装界面没有选择run build的选项了</p>
+<p>![vue-cli3的main.js][3.png]</p>
+<p>由此我们不难发现，cli3的main.js里面没有el挂载app了，而是多了个$mount。</p>
 
                 
             </div>
@@ -533,7 +499,7 @@ let sum=0,i=">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://heleijie.gitee.io/2021/11/27/vue%E7%AC%94%E8%AE%B0/">https://heleijie.gitee.io/2021/11/27/vue%E7%AC%94%E8%AE%B0/</a>
+                    <a href="https://heleijie.gitee.io/2021/12/12/%E8%84%9A%E6%89%8B%E6%9E%B6%E9%97%AE%E9%A2%98/">https://heleijie.gitee.io/2021/12/12/%E8%84%9A%E6%89%8B%E6%9E%B6%E9%97%AE%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -764,54 +730,18 @@ let sum=0,i=">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/11/27/css3%E6%96%B0%E7%89%B9%E6%80%A7/">
+                <a href="/2021/12/12/%E8%84%9A%E6%89%8B%E6%9E%B6%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="css3新特性">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">css3新特性</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-27
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Jaccob He
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/11/26/%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="hexo博客框架简介绍">
-                        
-                        <span class="card-title">hexo博客框架简介绍</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -822,7 +752,45 @@ let sum=0,i=">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Jaccob He
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/06/webpack%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="webpack初步了解">
+                        
+                        <span class="card-title">webpack初步了解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-06
                             </span>
                         <span class="publish-author">
                             
