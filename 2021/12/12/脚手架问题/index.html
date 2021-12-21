@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="楚门症患者">
-    <meta name="description" content="
-titie:脚手架问题1. vue init webpack(vue-cli2.0安装脚手架命令)在选择Vue build时如果选择的是runtime-only(只用运行环境)，则在src里面的main.js是如下这样的：
-![runti">
+    <meta name="description" content="1. vue init webpack(vue-cli2.0安装脚手架命令)在选择Vue build时如果选择的是runtime-only(只用运行环境)，则在src里面的main.js是如下这样的：
+
+而如果选择的是runtime(运行环">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -465,13 +465,12 @@ titie:脚手架问题1. vue init webpack(vue-cli2.0安装脚手架命令)在选�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h2 id="titie-脚手架问题"><a href="#titie-脚手架问题" class="headerlink" title="titie:脚手架问题"></a>titie:脚手架问题</h2><h3 id="1-vue-init-webpack-vue-cli2-0安装脚手架命令"><a href="#1-vue-init-webpack-vue-cli2-0安装脚手架命令" class="headerlink" title="1. vue init webpack(vue-cli2.0安装脚手架命令)"></a>1. vue init webpack(vue-cli2.0安装脚手架命令)</h3><p>在选择Vue build时如果选择的是runtime-only(只用运行环境)，则在src里面的main.js是如下这样的：</p>
-<p>![runtime-only/standalone的main.js][1.png]</p>
+                <h3 id="1-vue-init-webpack-vue-cli2-0安装脚手架命令"><a href="#1-vue-init-webpack-vue-cli2-0安装脚手架命令" class="headerlink" title="1. vue init webpack(vue-cli2.0安装脚手架命令)"></a>1. vue init webpack(vue-cli2.0安装脚手架命令)</h3><p>在选择Vue build时如果选择的是runtime-only(只用运行环境)，则在src里面的main.js是如下这样的：</p>
+<p><img src="1.png" alt="runtime-only/standalone的main.js"></p>
 <p>而如果选择的是runtime(运行环境)+compiler(编译程序)，则src下的main.js是这样的</p>
-<p>![runtime+compiler/runtime的main.js][2.png]</p>
+<p><img src="2.png" alt="runtime+compiler/runtime的main.js"></p>
 <p>对比之下不难发现，一个new Vue里面el下面的是render，一个是template和components,然后再让我们看看vue-cli（脚手架）3的main.js界面，值得注意的是，脚手架3安装界面没有选择run build的选项了</p>
-<p>![vue-cli3的main.js][3.png]</p>
+<p><img src="3.png" alt="vue-cli3的main.js"></p>
 <p>由此我们不难发现，cli3的main.js里面没有el挂载app了，而是多了个$mount。</p>
 
                 
