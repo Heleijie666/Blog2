@@ -528,6 +528,14 @@
 
 <p>box-sizing 属性可设置的值有 content-box、border-box 和 inherit<br>content-box 是W3C的标准盒模型，元素宽度 = 内容宽度 + padding + border：意思是 padding 和 border 会增加元素的宽度，以至于实际上的 width 大于原始设定的 width<br>border-box 是ie的怪异盒模型，元素宽度 = 设定的宽度，已经将 padding 和 border 包括进去了，比如有时候在元素基础上添加内距 padding 或 border 会将布局撑破，但是使用 border-box 就可以轻松完成<br>inherit：规定应从父元素继承 box-sizing 属性的值</p>
 <p>outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓</p>
+<h3 id="8-flex属性"><a href="#8-flex属性" class="headerlink" title="8.flex属性"></a>8.flex属性</h3><p>display:block会使得元素块状显示，一块就占了一行，所以这种元素是一行一行显示，而display:flex(弹性布局)就会使得元素都在一一行显示，它优先把一行的空间先占满，等空间满了之后再去换行,两种差别如下所示</p>
+<p><img src="display.png" alt="两种display的区别"></p>
+<p>flex属性其实有三个属性，分别为flex-grow,flex-shrink,flex-basis。</p>
+<p>flex-grow:定义项目的放大比例</p>
+<p>flex-shrink:定义项目的缩小比例</p>
+<p>flex-basis:定义项目的主轴空间</p>
+<p>flex:1表示内容自动沾满剩余空间</p>
+<p>具体详情这篇博客写得很详细，链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LangZ-/p/12703858.html">https://www.cnblogs.com/LangZ-/p/12703858.html</a></p>
 
                 
             </div>
@@ -1045,7 +1053,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2021-2022</span>
             
             <a href="/about" target="_blank">Jaccob He</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>

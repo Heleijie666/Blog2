@@ -491,8 +491,15 @@ let sum=0,i=">
 <p>const{XXX}=this.XXX</p>
 <p>const{XXX}=this.props相当于const XXX = this.props.XXX</p>
 <h3 id="10"><a href="#10" class="headerlink" title="10"></a>10</h3><p>【报错】Maximum call stack size exceeded</p>
-<p>解决：</p>
-<p>items.splice(index ,1 ,items)-&gt;items.splice(index ,1 ,item)</p>
+<p>错误的字面意思是：超出最大调用堆栈大小。</p>
+<p>【解决】：</p>
+<p>这种报错的原因有很多种，分情况如下：</p>
+<p>1有的由于是递归函数产生死循环，类似这种名字打错然后调用自己的函数</p>
+<p>fullname2(state,getters,rootState) {<br>      return getters.fullname2+rootState.counter<br>    }</p>
+<p>2有的是由于router里面路径未声明</p>
+<p>3有的是未定义变量</p>
+<p>4由于他引入了swiper插件，在组件里引用了，并且组件的name为Swiper，由于name与swiper插件重名了，所以报这个错误。然后我就想起我引用了百度地图插件，也有可能是这原因，果不其然，真的是这原因，然后我把name改成map就不报错了。所有说，以后给组件里引入插件时，注意name不要声明为插件名。</p>
+<p>5 items.splice(index ,1 ,items)-&gt;items.splice(index ,1 ,item)</p>
 <p>错误代码:</p>
 <p>methods:{<br>  handleChange({index,value}){<br>    const{items} = this<br>    const  item = items[index]<br>    item.qty = value<br>    items.splice(index ,1 ,items)</p>
 <p>  }</p>
@@ -501,12 +508,31 @@ let sum=0,i=">
 <p>const materials = [<br>  ‘Hydrogen’,<br>  ‘Helium’,<br>  ‘Lithium’,<br>  ‘Beryllium’<br>];</p>
 <p>console.log(materials.map(material =&gt; material.length));<br>// expected output: Array [8, 6, 7, 9]</p>
 <p>//map()方法定义在JavaScript的Array中，它返回一个新的数组，数组中的元素为原始数组调用函数处理后的值。</p>
-<p>栗有：</p>
-<p>1 var arr = [“wei”,”ze”,”yang”];<br>2 arr.map(item=&gt;”Mr.”+item);   // [“Mr.wei”, “Mr.ze”, “Mr.yang”]<br>实则</p>
-<p>1 var arr = [“wei”,”ze”,”yang”];<br>2 arr.map(function(item){<br>3     return “Mr.”+item;<br>4 });</p>
+<p><strong>栗有：</strong></p>
+<p><strong>1 var arr = [“wei”,”ze”,”yang”];</strong><br><strong>2 arr.map(item=&gt;”Mr.”+item);   // [“Mr.wei”, “Mr.ze”, “Mr.yang”]</strong><br><strong>实则</strong></p>
+<p><strong>1 var arr = [“wei”,”ze”,”yang”];</strong><br><strong>2 arr.map(function(item){</strong><br><strong>3     return “Mr.”+item;</strong><br><strong>4 });</strong></p>
 <h3 id="12"><a href="#12" class="headerlink" title="12"></a>12</h3><p>【报错】出现这种网址栏url重复了几个home的情况</p>
 <p><img src="1.png" alt="重复路径"></p>
 <p>【解决】router-link标签里面的 to=”home/news”,home前面加/号</p>
+<h3 id="13"><a href="#13" class="headerlink" title="13"></a>13</h3><p>【报错】用keep-alive包裹<router-view>出现不生效的问题（目前水平很低还没有解决）</p>
+<p>【解决】利用插槽的写法可以完美解决<br>实现思路：组件状态保留不成功，看到浏览器控制台给出了提示信息，替换自己写的代码</p>
+<p>如图所示：</p>
+<p><img src="2.png" alt="v-slot解决"></p>
+<h3 id="14-和-和-三种路径的区别"><a href="#14-和-和-三种路径的区别" class="headerlink" title="14./和../和/三种路径的区别"></a>14<a target="_blank" rel="noopener" href="https://www.cnblogs.com/linqingvoe/p/10942135.html">./和../和/三种路径的区别</a></h3><p>./表示当前目录</p>
+<p>../表示当前目录的上一级目录，也就是父级目录</p>
+<p>/表示根目录</p>
+<h3 id="15"><a href="#15" class="headerlink" title="15"></a>15</h3><p>vue-cli2创建项目命令:vue init webpack 项目名</p>
+<p>vue-cli3穿甲项目命令：vue create 项目名</p>
+<h3 id="16"><a href="#16" class="headerlink" title="16"></a>16</h3><p><strong>vue3.0</strong> main.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&quot;./router&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">createApp(App).use(router).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>vue2.0</strong> main.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">render</span>: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">  router</span><br><span class="line">&#125;).$mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="17"><a href="#17" class="headerlink" title="17"></a>17</h3><p><em>Duplicated</em> <em>code</em> <em>fragment</em> </p>
+<p> 产生这个提示的原因是,在同一个项目里,有相同的代码块,存在于不同的文件中</p>
+<h3 id="18"><a href="#18" class="headerlink" title="18"></a>18</h3><p>插槽为什么要在外面包裹一个div标签，用这个div标签来写样式呢？</p>
+<p>因为如果直接在插槽<slot>上面写的话，如果这个插槽被覆盖了，那么它的class自然也就被覆盖了，导致style里面的样式起不了作用。</p>
 
                 
             </div>
@@ -1024,7 +1050,7 @@ let sum=0,i=">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2021-2022</span>
             
             <a href="/about" target="_blank">Jaccob He</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
