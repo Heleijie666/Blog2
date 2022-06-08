@@ -5,9 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Vue笔记, 楚门症患者">
-    <meta name="description" content="Vue笔记1.在标签里使用mustache语法时，computed计算属性的函数可以不加（），但是如果是函数则必须加（），所以在某种程度上说，computed就是将函数转化成变量。
-2.let关键字声明变量的时候：
-let sum=0,i=">
+    <meta name="description" content="Vue笔记1.computed计算属性加不加()在标签里使用mustache语法时，computed计算属性的函数可以不加（），但是如果是函数则必须加（），所以在某种程度上说，computed就是将函数转化成变量。
+2.let关键字声明变量">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -465,32 +464,31 @@ let sum=0,i=">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Vue笔记"><a href="#Vue笔记" class="headerlink" title="Vue笔记"></a>Vue笔记</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>在标签里使用mustache语法时，computed计算属性的函数可以不加（），但是如果是函数则必须加（），所以在某种程度上说，computed就是将函数转化成变量。</p>
-<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p>let关键字声明变量的时候：</p>
+                <h2 id="Vue笔记"><a href="#Vue笔记" class="headerlink" title="Vue笔记"></a>Vue笔记</h2><h3 id="1-computed计算属性加不加"><a href="#1-computed计算属性加不加" class="headerlink" title="1.computed计算属性加不加()"></a>1.computed计算属性加不加()</h3><p>在标签里使用mustache语法时，computed计算属性的函数可以不加（），但是如果是函数则必须加（），所以在某种程度上说，computed就是将函数转化成变量。</p>
+<h3 id="2-let关键字声明变量"><a href="#2-let关键字声明变量" class="headerlink" title="2.let关键字声明变量"></a>2.let关键字声明变量</h3><p>let关键字声明变量的时候：</p>
 <p>let sum=0,i=0;</p>
 <p>let i,sum=0;</p>
 <p>第一种i和sum都会定义且初始值为0，第二种方法则是i和sum都定义了，但是i没有初始值。</p>
-<h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><p>用来比较或者判断两者是否相等，比较时可以自动转换数据类型。</p>
+<h3 id="3-的作用"><a href="#3-的作用" class="headerlink" title="3.===的作用"></a>3.===的作用</h3><p>用来比较或者判断两者是否相等，比较时可以自动转换数据类型。</p>
 <p>　　=== 用来较为严格的比较，除判断数据是否相等 ，还会判断两者数据类型是否相同，如不相同也不会转换数据类型，返回（false）。</p>
-<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><script src="vue.js"></script>
-<script src="main.js"></script>
-
+<h3 id="4-代码引入的位置"><a href="#4-代码引入的位置" class="headerlink" title="4.代码引入的位置"></a>4.代码引入的位置</h3><p>script src=”vue.js”&gt;  &lt;/script</p>
+<p>script src=”main.js”&gt; &lt;/script</p>
 <p>这两句话最好放到代码的后面，否则就可能出现你界面做出来了，vue的数据没有渲染进去。</p>
 <p>比如表格出来了，当里面的数据只显示一个</p>
-<h3 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h3><p>splice（参数1，参数2，参数3）函数可以用来插入也可以用来删除</p>
+<h3 id="5-splice（参数1，参数2，参数3）"><a href="#5-splice（参数1，参数2，参数3）" class="headerlink" title="5.splice（参数1，参数2，参数3）"></a>5.splice（参数1，参数2，参数3）</h3><p>splice（参数1，参数2，参数3）函数可以用来插入也可以用来删除</p>
 <p>参数1：开始操作的位置</p>
 <p>参数2：删除的个数，0则为不删除也就是添加。</p>
 <p>参数3：只有在参数2 为0的时候使用，一般是数组[a,b,c]，意思就在参数1 的位置后面添加a，b，c三个元素。</p>
-<h3 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h3><p>v-bind语法糖就是冒号，   v-bind几乎可以绑定任何属性，甚至可以绑定class属性，同理也可以绑定id属性，用法都是一样的，都是直接在style标签里面.class{},#id{}然后书写样式，只是多了个绑定vue数据的步骤罢了。那么为什么要用v-bind呢<br>    主要是要跟vue里面容器的数据互动，可以把v-bind是一根通进vue容器的绳子，这个绳子将html里的属性和<br>    vue容器的里面的数据绑定起来。<br>    我们都知道，a标签有个href属性，主要是保存链接，当我们点击a标签开始生效，那么当我们在vue里面定义了<br>    一个url:’<a target="_blank" rel="noopener" href="http://www.baidu.com&/#39;%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%86%99%E5%9C%A8herf%E5%90%8E%E9%9D%A2%EF%BC%88">www.baidu.com&#39;的时候，我们不能直接写在herf后面（</a>&lt;a href:”url”&gt;），因为vue容器<br>    是封锁的，不能直接去拿数据，这时候就要用到v-bind。</p>
-<h3 id="7"><a href="#7" class="headerlink" title="7."></a>7.</h3><p>v-for一定要与v-bind:key=”id”连用</p>
-<h3 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h3><p>【面试】父子组件通信的方式有哪几种？</p>
+<h3 id="6-v-bind的一些理解"><a href="#6-v-bind的一些理解" class="headerlink" title="6.v-bind的一些理解"></a>6.v-bind的一些理解</h3><p>v-bind语法糖就是冒号，   v-bind几乎可以绑定任何属性，甚至可以绑定class属性，同理也可以绑定id属性，用法都是一样的，都是直接在style标签里面.class{},#id{}然后书写样式，只是多了个绑定vue数据的步骤罢了。那么为什么要用v-bind呢<br>    主要是要跟vue里面容器的数据互动，可以把v-bind是一根通进vue容器的绳子，这个绳子将html里的属性和<br>    vue容器的里面的数据绑定起来。<br>    我们都知道，a标签有个href属性，主要是保存链接，当我们点击a标签开始生效，那么当我们在vue里面定义了<br>    一个url:’<a target="_blank" rel="noopener" href="http://www.baidu.com&/#39;%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%86%99%E5%9C%A8herf%E5%90%8E%E9%9D%A2%EF%BC%88">www.baidu.com&#39;的时候，我们不能直接写在herf后面（</a>&lt;a href:”url”&gt;），因为vue容器<br>    是封锁的，不能直接去拿数据，这时候就要用到v-bind。</p>
+<h3 id="7-v-bind-key与v-for"><a href="#7-v-bind-key与v-for" class="headerlink" title="7.v-bind:key与v-for"></a>7.v-bind:key与v-for</h3><p>v-for一定要与v-bind:key=”id”连用</p>
+<h3 id="8-父子通信的方式"><a href="#8-父子通信的方式" class="headerlink" title="8.父子通信的方式"></a>8.父子通信的方式</h3><p>【面试】父子组件通信的方式有哪几种？</p>
 <p>1 props   $mit<br>2 回调函数(callback)<br>3 parent + $children<br>4 provide + inject<br>5 $attrs + $ilsteners<br>6  ref  refs</p>
 <p>props用于父传子，props写在子组件注册（Vue.component）里面，跟methods：，data：一样的位置</p>
 <p>1、父组件可以使用 props 把数据传给子组件。<br>2、子组件可以使用 $emit 触发父组件的自定义事件。<a target="_blank" rel="noopener" href="https://c.runoob.com/codedemo/5353/">https://c.runoob.com/codedemo/5353/</a></p>
-<h3 id="9"><a href="#9" class="headerlink" title="9"></a>9</h3><p>ES6简写</p>
+<h3 id="9const-XXX-this-XXX"><a href="#9const-XXX-this-XXX" class="headerlink" title="9const{XXX}=this.XXX"></a>9const{XXX}=this.XXX</h3><p>ES6简写</p>
 <p>const{XXX}=this.XXX</p>
 <p>const{XXX}=this.props相当于const XXX = this.props.XXX</p>
-<h3 id="10"><a href="#10" class="headerlink" title="10"></a>10</h3><p>【报错】Maximum call stack size exceeded</p>
+<h3 id="10【报错】Maximum-call-stack-size-exceeded"><a href="#10【报错】Maximum-call-stack-size-exceeded" class="headerlink" title="10【报错】Maximum call stack size exceeded"></a>10【报错】Maximum call stack size exceeded</h3><p>【报错】Maximum call stack size exceeded</p>
 <p>错误的字面意思是：超出最大调用堆栈大小。</p>
 <p>【解决】：</p>
 <p>这种报错的原因有很多种，分情况如下：</p>
@@ -503,36 +501,46 @@ let sum=0,i=">
 <p>错误代码:</p>
 <p>methods:{<br>  handleChange({index,value}){<br>    const{items} = this<br>    const  item = items[index]<br>    item.qty = value<br>    items.splice(index ,1 ,items)</p>
 <p>  }</p>
-<h3 id="11"><a href="#11" class="headerlink" title="11"></a>11</h3><p>箭头函数：</p>
+<h3 id="11箭头函数"><a href="#11箭头函数" class="headerlink" title="11箭头函数"></a>11箭头函数</h3><p>箭头函数：</p>
 <p><strong>其中脚手架vue build若选择的是runtime-only，那生成脚手架之后的src里的mian.js就有一个render：h =&gt; h(App)箭头函数</strong></p>
 <p>const materials = [<br>  ‘Hydrogen’,<br>  ‘Helium’,<br>  ‘Lithium’,<br>  ‘Beryllium’<br>];</p>
 <p>console.log(materials.map(material =&gt; material.length));<br>// expected output: Array [8, 6, 7, 9]</p>
 <p>//map()方法定义在JavaScript的Array中，它返回一个新的数组，数组中的元素为原始数组调用函数处理后的值。</p>
 <p><strong>栗有：</strong></p>
-<p><strong>1 var arr = [“wei”,”ze”,”yang”];</strong><br><strong>2 arr.map(item=&gt;”Mr.”+item);   // [“Mr.wei”, “Mr.ze”, “Mr.yang”]</strong><br><strong>实则</strong></p>
-<p><strong>1 var arr = [“wei”,”ze”,”yang”];</strong><br><strong>2 arr.map(function(item){</strong><br><strong>3     return “Mr.”+item;</strong><br><strong>4 });</strong></p>
-<h3 id="12"><a href="#12" class="headerlink" title="12"></a>12</h3><p>【报错】出现这种网址栏url重复了几个home的情况</p>
+<p>1 var arr = [“wei”,”ze”,”yang”];<br><strong>2 arr.map(item=&gt;”Mr.”+item);</strong>   // [“Mr.wei”, “Mr.ze”, “Mr.yang”]<br><strong>实则</strong></p>
+<p>1 var arr = [“wei”,”ze”,”yang”];<br><strong>2 arr.map(function(item){</strong><br><strong>3     return “Mr.”+item;</strong><br><strong>4 });</strong></p>
+<h3 id="12【报错】出现这种网址栏url重复了几个home的情况"><a href="#12【报错】出现这种网址栏url重复了几个home的情况" class="headerlink" title="12【报错】出现这种网址栏url重复了几个home的情况"></a>12【报错】出现这种网址栏url重复了几个home的情况</h3><p>【报错】出现这种网址栏url重复了几个home的情况</p>
 <p><img src="1.png" alt="重复路径"></p>
 <p>【解决】router-link标签里面的 to=”home/news”,home前面加/号</p>
-<h3 id="13"><a href="#13" class="headerlink" title="13"></a>13</h3><p>【报错】用keep-alive包裹<router-view>出现不生效的问题（目前水平很低还没有解决）</p>
+<h3 id="13【报错】用keep-alive包裹router-view标签出现不生效的问题"><a href="#13【报错】用keep-alive包裹router-view标签出现不生效的问题" class="headerlink" title="13【报错】用keep-alive包裹router-view标签出现不生效的问题"></a>13【报错】用keep-alive包裹router-view标签出现不生效的问题</h3><p>【报错】用keep-alive包裹router-view标签出现不生效的问题（目前水平很低还没有解决）</p>
 <p>【解决】利用插槽的写法可以完美解决<br>实现思路：组件状态保留不成功，看到浏览器控制台给出了提示信息，替换自己写的代码</p>
 <p>如图所示：</p>
 <p><img src="2.png" alt="v-slot解决"></p>
 <h3 id="14-和-和-三种路径的区别"><a href="#14-和-和-三种路径的区别" class="headerlink" title="14./和../和/三种路径的区别"></a>14<a target="_blank" rel="noopener" href="https://www.cnblogs.com/linqingvoe/p/10942135.html">./和../和/三种路径的区别</a></h3><p>./表示当前目录</p>
 <p>../表示当前目录的上一级目录，也就是父级目录</p>
 <p>/表示根目录</p>
-<h3 id="15"><a href="#15" class="headerlink" title="15"></a>15</h3><p>vue-cli2创建项目命令:vue init webpack 项目名</p>
+<h3 id="15cli2和cl3创建项目命令的区别"><a href="#15cli2和cl3创建项目命令的区别" class="headerlink" title="15cli2和cl3创建项目命令的区别"></a>15cli2和cl3创建项目命令的区别</h3><p>vue-cli2创建项目命令:vue init webpack 项目名</p>
 <p>vue-cli3穿甲项目命令：vue create 项目名</p>
-<h3 id="16"><a href="#16" class="headerlink" title="16"></a>16</h3><p><strong>vue3.0</strong> main.js</p>
+<h3 id="16vue3和vue2-main-js的区别"><a href="#16vue3和vue2-main-js的区别" class="headerlink" title="16vue3和vue2 main.js的区别"></a>16vue3和vue2 main.js的区别</h3><p><strong>vue3.0</strong> main.js</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&quot;./router&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">createApp(App).use(router).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <p><strong>vue2.0</strong> main.js</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">render</span>: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">  router</span><br><span class="line">&#125;).$mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<h3 id="17"><a href="#17" class="headerlink" title="17"></a>17</h3><p><em>Duplicated</em> <em>code</em> <em>fragment</em> </p>
+<h3 id="17Duplicated-code-fragment"><a href="#17Duplicated-code-fragment" class="headerlink" title="17Duplicated code fragment"></a>17<em>Duplicated</em> <em>code</em> <em>fragment</em></h3><p><em>Duplicated</em> <em>code</em> <em>fragment</em> </p>
 <p> 产生这个提示的原因是,在同一个项目里,有相同的代码块,存在于不同的文件中</p>
-<h3 id="18"><a href="#18" class="headerlink" title="18"></a>18</h3><p>插槽为什么要在外面包裹一个div标签，用这个div标签来写样式呢？</p>
-<p>因为如果直接在插槽<slot>上面写的话，如果这个插槽被覆盖了，那么它的class自然也就被覆盖了，导致style里面的样式起不了作用。</p>
+<h3 id="18插槽外面包裹一个div标签的原因"><a href="#18插槽外面包裹一个div标签的原因" class="headerlink" title="18插槽外面包裹一个div标签的原因"></a>18插槽外面包裹一个div标签的原因</h3><p>插槽为什么要在外面包裹一个div标签，用这个div标签来写样式呢？</p>
+<p>因为如果直接在插槽&lt;slot上面写的话，如果这个插槽被覆盖了，那么它的class自然也就被覆盖了，导致style里面的样式起不了作用。</p>
+<h3 id="19设置了图片的宽度不设置高度"><a href="#19设置了图片的宽度不设置高度" class="headerlink" title="19设置了图片的宽度不设置高度"></a>19设置了图片的宽度不设置高度</h3><p>设置了图片的宽度不设置高度，那么图片的高度就会自适应，什么是自适应呢，就是图片的高度会根据原来的图片的宽高比来设定（即图片的宽高比不会变）</p>
+<h3 id="20vue里面的data为什么要用return包裹住"><a href="#20vue里面的data为什么要用return包裹住" class="headerlink" title="20vue里面的data为什么要用return包裹住"></a>20vue里面的data为什么要用return包裹住</h3><p>Vue里面的date为什么要用return包裹住呢？我觉得是这样的，我们去看视频去写一些简单的实例的时候，我们的data是并没有用return包裹住的，是因为我们的 data不存在被复用的情况，也就是不会出现数据污染，但是在组件里面我们为什么date一定要用return包裹住呢，因为用return包裹住之后，变量的作用域就只会存在Data函数中，它一旦使用完就会被销毁，重新使用也会重新创建，等于说这个数据就是相当于源数据里面的复制的数据，修改删除什么的也不会造成原数据的改变</p>
+<h3 id="21-router和-route的区别"><a href="#21-router和-route的区别" class="headerlink" title="21$router和$route的区别"></a>21$router和$route的区别</h3><p>一个全局，一个局部</p>
+<p>$router:全局的路由对象，主要用于push，replace等方法</p>
+<p>$route:当前激活的局部路由对象，用于获取对象的参数（path，params）</p>
+<h3 id="22activated和deactivated什么时候不会被调用"><a href="#22activated和deactivated什么时候不会被调用" class="headerlink" title="22activated和deactivated什么时候不会被调用"></a>22activated和deactivated什么时候不会被调用</h3><p>如果一个组件没有被keep-alive标签包裹，那么该组件就不会加载进缓存，那么它的activated和deactivated方法就不会生效。</p>
+<h3 id="23-Vue-项目中-vue-config-js-文件就等同于-webpack-的-webpack-config-js。"><a href="#23-Vue-项目中-vue-config-js-文件就等同于-webpack-的-webpack-config-js。" class="headerlink" title="23 Vue 项目中 vue.config.js 文件就等同于 webpack 的 webpack.config.js。"></a>23 Vue 项目中 vue.config.js 文件就等同于 webpack 的 webpack.config.js。</h3><p>vue-cli3 之后创建的时候并不会自动创建 vue.config.js，因为这个是个可选项，所以一般都是需要修改 webpack 的时候才会自己创建一个 vue.config.js。</p>
+<p>开发者一般不需要再去知道 weboack 做了什么，所以没有暴露 webpack 的配置文件，但你依然可以创建 vue.config.js 去修改默认的 webpack。</p>
+<p>手动创建一个 vue.config.js：</p>
+<p>module.exports = {<br>  devServer: {<br>    // 端口号<br>    port: 8080,<br>    // 配置不同的后台API地址<br>    proxy: {<br>      ‘/api’: {<br>        target: ‘<a target="_blank" rel="noopener" href="http://www.dzm.com&/#39;">http://www.dzm.com&#39;</a>,<br>        ws: false,<br>        changeOrigin: true,<br>        pathRewrite: {<br>          ‘^/api’: ‘’<br>        }<br>      }<br>    }<br>  }<br>}</p>
 
                 
             </div>
