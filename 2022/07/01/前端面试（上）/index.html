@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="css3新特性, HLJ的Blog">
-    <meta name="description" content="1.选择器123456789:last-child /* 选择元素最后一个孩子 */:first-child /* 选择元素第一个孩子 */:nth-child(1) /* 按照第几个孩子给它设置样式 */:nth-child(even) ">
+    <meta name="keywords" content="前端面试（上）, HLJ的Blog">
+    <meta name="description" content="1.居中1.1水平居中1、margin：0 auto（需父元素指定宽高）
+2、transform（非常重要，无论在哪种居中方式里都有）
+水平的话就是（后面的垂直同理）
+position: absolute;
+left：50%
+transfo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>css3新特性 | HLJ的Blog</title>
+    <title>前端面试（上） | HLJ的Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">css3新特性</h1>
+                    <h1 class="description center-align post-title">前端面试（上）</h1>
                 </div>
             </div>
         </div>
@@ -442,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-27
+                    2022-07-01
                 </div>
                 
 
@@ -463,79 +468,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-选择器"><a href="#1-选择器" class="headerlink" title="1.选择器"></a>1.选择器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:last-child</span> <span class="comment">/* 选择元素最后一个孩子 */</span></span><br><span class="line"><span class="selector-pseudo">:first</span>-child <span class="comment">/* 选择元素第一个孩子 */</span></span><br><span class="line"><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) <span class="comment">/* 按照第几个孩子给它设置样式 */</span></span><br><span class="line"><span class="selector-pseudo">:nth-child</span>(even) <span class="comment">/* 按照偶数 */</span></span><br><span class="line"><span class="selector-pseudo">:nth-child</span>(odd)  <span class="comment">/* 按照奇数 */</span></span><br><span class="line"><span class="selector-pseudo">:disabled</span> <span class="comment">/* 选择每个禁用的E元素 */</span></span><br><span class="line"><span class="selector-pseudo">:checked</span> <span class="comment">/* 选择每个被选中的E元素 */</span></span><br><span class="line"><span class="selector-pseudo">:not</span>(selector) <span class="comment">/* 选择非 selector 元素的每个元素 */</span></span><br><span class="line"><span class="selector-pseudo">::selection</span> <span class="comment">/* 选择被用户选取的元素部分 */</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-背景和边框"><a href="#2-背景和边框" class="headerlink" title="2.背景和边框"></a>2.背景和边框</h3><ul>
-<li><p>背景：<br>background-size：规定背景图片的尺寸（cover：填充；100% 100%：拉伸）<br>background-origin：规定背景图片的定位区域<br>对于 background-origin 属性，有如下属性<br>背景图片可以放置于 content-box、padding-box 或 border-box 区域</p>
-</li>
-<li><p>边框：<br>border-radius：圆角<br>box-shadow / text-shadow：阴影<br>border-image：边框图片</p>
-</li>
-</ul>
-<h3 id="3-文本效果"><a href="#3-文本效果" class="headerlink" title="3.文本效果"></a>3.文本效果</h3><p><img src="%E6%96%87%E6%9C%AC%E6%95%88%E6%9E%9C.png" alt="文本效果"></p>
-<h3 id="4-2D-3D转换"><a href="#4-2D-3D转换" class="headerlink" title="4.2D/3D转换"></a>4.2D/3D转换</h3><ul>
-<li>2D 转换（transform）</li>
-</ul>
-<ol>
-<li>translate()：元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数。 transform: translate(50px, 100px);</li>
-<li>rotate()：元素顺时针旋转给定的角度。若为负值，元素将逆时针旋转。transform: rotate(30deg);</li>
-<li>scale()：元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数，也可以一个值（宽高）。transform: scale(2,4);</li>
-<li>skew()：元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数。transform: skew(30deg, 20deg);</li>
-<li>matrix()： 把所有 2D 转换方法组合在一起，需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。transform:matrix(0.866,0.5,-0.5,0.866,0,0);</li>
-</ol>
-<ul>
-<li>3D 转换</li>
-</ul>
-<ol>
-<li>rotateX()：元素围绕其 X 轴以给定的度数进行旋转。transform: rotateX(120deg);</li>
-<li>rotateY()：元素围绕其 Y 轴以给定的度数进行旋转。transform: rotateY(130deg);</li>
-<li>perspective：规定 3D 元素的透视效果</li>
-</ol>
-<h3 id="5-动画、过度"><a href="#5-动画、过度" class="headerlink" title="5.动画、过度"></a>5.动画、过度</h3><ul>
-<li>过渡效果（transition），使页面变化更平滑，以下参数可直接写在 transition 后面</li>
-</ul>
-<ol>
-<li>transition-property ：执行动画对应的属性，例如 color，background 等，可以使用 all 来指定所有的属性。</li>
-<li>transition-duration：过渡动画的一个持续时间。</li>
-<li>transition-timing-function：在延续时间段，动画变化的速率，常见的有：ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier</li>
-<li>transition-delay：延迟多久后开始动画</li>
-</ol>
-<ul>
-<li>动画（animation）<br>先定义 @keyframes 规则（0%，100% | from，to）<br>然后定义 animation，以下参数可直接写在 animation 后面</li>
-</ul>
-<ol>
-<li>animation-name: 定义动画名称</li>
-<li>animation-duration: 指定元素播放动画所持续的时间长</li>
-<li>animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(, , , )： 指元素根据时间的推进来改变属性值的变换速率，即动画的播放方式</li>
-<li>animation-delay: 指定元素动画开始时间</li>
-<li>animation-iteration-count: infinite | number：指定元素播放动画的循环次数</li>
-<li>animation-direction: normal | alternate： 指定元素动画播放的方向，其只有两个值，默认值为normal，如果设置为 normal 时，动画的每次循环都是向前播放；另一个值是 alternate，规定动画在下一周期逆向地播放（来去播放）</li>
-<li>animation-play-state: running | paused ：控制元素动画的播放状态</li>
-</ol>
-<h3 id="6-多列布局"><a href="#6-多列布局" class="headerlink" title="6.多列布局"></a>6.多列布局</h3><p>通过CSS3，能够创建多个列来对文本进行布局</p>
-<ol>
-<li>column-count: 规定元素应该被分隔的列数</li>
-<li>column-gap: 规定列之间的间隔</li>
-<li>column-rule: 设置列之间的宽度、样式和颜色规则</li>
-</ol>
-<h3 id="7-用户界面"><a href="#7-用户界面" class="headerlink" title="7.用户界面"></a>7.用户界面</h3><p>CSS3中，新的用户界面特性包括重设元素尺寸、盒尺寸以及轮廓等</p>
-<ol>
-<li>resize</li>
-<li>box-sizing</li>
-<li>outline-offset</li>
-</ol>
-<p>resize 属性规定是否可由用户调整元素尺寸。如果希望此属性生效，需要设置元素的 overflow 属性，值可以是 auto、hidden 或 scroll</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">resize</span>: both; <span class="comment">/* none|both|horizontal|vertical; */</span></span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>box-sizing 属性可设置的值有 content-box、border-box 和 inherit<br>content-box 是W3C的标准盒模型，元素宽度 = 内容宽度 + padding + border：意思是 padding 和 border 会增加元素的宽度，以至于实际上的 width 大于原始设定的 width<br>border-box 是ie的怪异盒模型，元素宽度 = 设定的宽度，已经将 padding 和 border 包括进去了，比如有时候在元素基础上添加内距 padding 或 border 会将布局撑破，但是使用 border-box 就可以轻松完成<br>inherit：规定应从父元素继承 box-sizing 属性的值</p>
-<p>outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓</p>
-<h3 id="8-flex属性"><a href="#8-flex属性" class="headerlink" title="8.flex属性"></a>8.flex属性</h3><p>display:block会使得元素块状显示，一块就占了一行，所以这种元素是一行一行显示，而display:flex(弹性布局)就会使得元素都在一一行显示，它优先把一行的空间先占满，等空间满了之后再去换行,两种差别如下所示</p>
-<p><img src="display.png" alt="两种display的区别"></p>
-<p>flex属性其实有三个属性，分别为flex-grow,flex-shrink,flex-basis。</p>
-<p>flex-grow:定义项目的放大比例</p>
-<p>flex-shrink:定义项目的缩小比例</p>
-<p>flex-basis:定义项目的主轴空间</p>
-<p>flex:1表示内容自动沾满剩余空间</p>
-<p>具体详情这篇博客写得很详细，链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LangZ-/p/12703858.html">https://www.cnblogs.com/LangZ-/p/12703858.html</a></p>
+                <h3 id="1-居中"><a href="#1-居中" class="headerlink" title="1.居中"></a>1.居中</h3><h4 id="1-1水平居中"><a href="#1-1水平居中" class="headerlink" title="1.1水平居中"></a>1.1水平居中</h4><p>1、margin：0 auto（需父元素指定宽高）</p>
+<p>2、transform（非常重要，无论在哪种居中方式里都有）</p>
+<p>水平的话就是（后面的垂直同理）</p>
+<p>position: absolute;</p>
+<p>left：50%</p>
+<p>transform: translateX(-50%);</p>
+<p>3、display:flex(非常重要，无论在哪种居中方式里都有）</p>
+<p>justify-content: center;//水平居中</p>
+<h4 id="1-2垂直居中"><a href="#1-2垂直居中" class="headerlink" title="1.2垂直居中"></a>1.2垂直居中</h4><p>1、margin:auto 0;</p>
+<p>首先要子绝父相，然后对要垂直居中的元素设置</p>
+<p>top:0,</p>
+<p>bottom:0。</p>
+<p>2、transform</p>
+<p>垂直的话就是</p>
+<p>position: absolute;</p>
+<p>top：50%</p>
+<p>transform: translateY(-50%);</p>
+<p>3、display:flex</p>
+<p>  align-items: center;//垂直居中</p>
+<h4 id="1-3水平垂直居中"><a href="#1-3水平垂直居中" class="headerlink" title="1.3水平垂直居中"></a>1.3水平垂直居中</h4><p>1、display:flex，对父元素设定(父元素宽高可以没有)</p>
+<p><strong>display:flex,</strong></p>
+<p>**justify-content: center;**（水平居中）</p>
+<p><strong>align-items:center;</strong>(垂直居中)</p>
+<p>2、使用margin:auto（适用绝对定位元素居中）子绝父相，对子元素设定</p>
+<p>margin:auto;<br>position: absolute;<br>top: 0;<br>bottom: 0;<br>left: 0;<br>right: 0;</p>
+<p>3、使用transform</p>
+<p>position: absolute;</p>
+<p>left: 50%;</p>
+<p>top:50%；</p>
+<p>transform: translate(-50%,-50%);</p>
+<p>4、文字居中</p>
+<p>行高line-height与父元素一致，同时对自身设置text-align:center</p>
+<h3 id="2-js数据类型"><a href="#2-js数据类型" class="headerlink" title="2.js数据类型"></a>2.js数据类型</h3><p>总共八种</p>
+<p>Null,undefined</p>
+<p>Number,String</p>
+<p>Boolean,Object</p>
+<p>BigInt,Symbol  (ES6新增)</p>
+<h3 id="3-js中-和-有什么区别"><a href="#3-js中-和-有什么区别" class="headerlink" title="3.js中==和===有什么区别"></a>3.js中==和===有什么区别</h3><p>==（相等）会进行类型的转换，而===（全等）不会</p>
 
                 
             </div>
@@ -562,7 +532,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://heleijie.gitee.io/2021/11/27/css3%E6%96%B0%E7%89%B9%E6%80%A7/">https://heleijie.gitee.io/2021/11/27/css3%E6%96%B0%E7%89%B9%E6%80%A7/</a>
+                    <a href="https://heleijie.gitee.io/2022/07/01/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%EF%BC%88%E4%B8%8A%EF%BC%89/">https://heleijie.gitee.io/2022/07/01/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%EF%BC%88%E4%B8%8A%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -793,54 +763,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/12/06/webpack%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3/">
+                <a href="/2022/07/01/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%EF%BC%88%E4%B8%8A%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="webpack初步了解">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="前端面试（上）">
                         
-                        <span class="card-title">webpack初步了解</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            He leijie
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/11/27/vue%E7%AC%94%E8%AE%B0/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Vue笔记">
-                        
-                        <span class="card-title">Vue笔记</span>
+                        <span class="card-title">前端面试（上）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -851,7 +785,45 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            He leijie
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/06/08/js%E7%AC%94%E8%AE%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="js笔记">
+                        
+                        <span class="card-title">js笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-08
                             </span>
                         <span class="publish-author">
                             

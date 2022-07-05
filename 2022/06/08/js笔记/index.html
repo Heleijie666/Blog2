@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="js笔记, 楚门症患者">
-    <meta name="description" content="Js笔记1.变量提升所谓的变量提升，从字面上理解好像很复杂，其实不然，概念这东西空说是理解不了的，放到实例中比较好一点。例如下面这个例子：
-console.log(a);
-var a=1;
-你去放到编译器（可能你懒得打开），或者直接到浏览器">
+    <meta name="keywords" content="js笔记, HLJ的Blog">
+    <meta name="description" content="Js笔记1.变量提升所谓的变量提升，从字面上理解好像很复杂，其实不然，类比 现实中的事情就好像，你去餐馆吃饭，你可以吃完东西再付钱，也可以付完钱再吃，无论是那种情况，老板都允许。变量提升无论是变量还是函数都有，本质还是因为js喜欢把定义的语">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@ var a=1;
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>js笔记 | 楚门症患者</title>
+    <title>js笔记 | HLJ的Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -47,7 +44,7 @@ var a=1;
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">楚门症患者</span>
+                    <span class="logo-span">HLJ的Blog</span>
                 </a>
             </div>
             
@@ -146,7 +143,7 @@ var a=1;
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">楚门症患者</div>
+        <div class="logo-name">HLJ的Blog</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -466,12 +463,27 @@ var a=1;
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Js笔记"><a href="#Js笔记" class="headerlink" title="Js笔记"></a>Js笔记</h2><h3 id="1-变量提升"><a href="#1-变量提升" class="headerlink" title="1.变量提升"></a>1.变量提升</h3><p>所谓的变量提升，从字面上理解好像很复杂，其实不然，概念这东西空说是理解不了的，放到实例中比较好一点。例如下面这个例子：</p>
+                <h2 id="Js笔记"><a href="#Js笔记" class="headerlink" title="Js笔记"></a>Js笔记</h2><h3 id="1-变量提升"><a href="#1-变量提升" class="headerlink" title="1.变量提升"></a>1.变量提升</h3><p>所谓的变量提升，从字面上理解好像很复杂，其实不然，类比 现实中的事情就好像，你去餐馆吃饭，你可以吃完东西再付钱，也可以付完钱再吃，无论是那种情况，老板都允许。变量提升无论是变量还是函数都有，本质还是因为js喜欢把定义的语句先放到编译器的头部先去编译，概念这东西空说是理解不了的，放到实例中比较好一点。</p>
+<h4 id="1-1定义变量的提升"><a href="#1-1定义变量的提升" class="headerlink" title="1.1定义变量的提升"></a>1.1定义变量的提升</h4><p>例如下面这个例子：</p>
 <p>console.log(a);</p>
 <p>var a=1;</p>
 <p>你去放到编译器（可能你懒得打开），或者直接到浏览器控制台里输入，发现结果居然没有报错，如果你之前学过java这类强类型的语言，a这个变量没有定义就使用那控制台必然是会报错的。</p>
 <p>但是在js中不会报错，但是它也不会输出1，不会报错的原因就是所有的定义语句都会被提升到代码的头部首先被编译，比如上面的 var a，也就是说这一句是先被编译的，其次再是console.log，最后再是赋值语句a=1，所以打印出来的是undefined，因为在打印语句执行时a并没有赋值。</p>
 <p>那么，这种定义语句在js中都会被提升到头部的特性，我们将它称为变量提升。</p>
+<h4 id="1-2函数的变量提升"><a href="#1-2函数的变量提升" class="headerlink" title="1.2函数的变量提升"></a>1.2函数的变量提升</h4><p>变量提升不仅存在定义变量里面，同时也存在函数里面。看下面的例子，正常来说我们使用一个函数的步骤是这样的。</p>
+<p>步骤一、先定义</p>
+<p>function f(args){</p>
+<p>​    console.log(args);</p>
+<p>}</p>
+<p>步骤二、使用</p>
+<p>f(“hello world”)</p>
+<p>所以如果是下面这种情况的话，应该会报错</p>
+<p>f(“hello world”)</p>
+<p>function f(args){</p>
+<p>​    console.log(args)</p>
+<p>}</p>
+<p>但其实并不会，因为函数也存在变量提升。</p>
+<h3 id="2-标签的id规范"><a href="#2-标签的id规范" class="headerlink" title="2.标签的id规范"></a>2.标签的id规范</h3><p>不能为纯数字或者数字开头</p>
 
                 
             </div>
@@ -488,7 +500,7 @@ var a=1;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Jaccob He</a>
+                    <a href="/about" rel="external nofollow noreferrer">He leijie</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -511,7 +523,7 @@ var a=1;
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Jaccob He</a>
+                    <a href="/about" target="_blank">He leijie</a>
                     !
                 </span>
             </div>
@@ -729,18 +741,17 @@ var a=1;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/06/08/js%E7%AC%94%E8%AE%B0/">
+                <a href="/2022/07/01/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%EF%BC%88%E4%B8%8A%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="js笔记">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="前端面试（上）">
                         
-                        <span class="card-title">js笔记</span>
+                        <span class="card-title">前端面试（上）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -750,18 +761,17 @@ var a=1;
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Jaccob He
+                            He leijie
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -794,7 +804,7 @@ var a=1;
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Jaccob He
+                            He leijie
                             
                         </span>
                     </div>
@@ -993,7 +1003,7 @@ var a=1;
             
                 <span id="year">2021-2022</span>
             
-            <a href="/about" target="_blank">Jaccob He</a>
+            <a href="/about" target="_blank">He leijie</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
